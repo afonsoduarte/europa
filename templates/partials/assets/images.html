@@ -1,8 +1,12 @@
+<div class="images" 
+     data-slick='{ 
+      "slidesToShow": 3,
+      "centerMode": true,
+      "variableWidth": true
+     }'>
 {% for image in page.images %}
   <div class="image">
-    <img src="{{ image.url }}" alt="{{ image.title }}" width="{{ image.width }}" height="{{ image.height }}">
-    {% if image.description %}
-      <em>{{ image.description }}</em>
-    {% endif %}
+    <img data-lazy="{{ image.url }}" alt="{{ page.title }}" >
   </div>
 {% endfor %}
+</div>

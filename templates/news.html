@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+
+{% block bodyclass %}blog{% endblock %}
+
+{% block main %}
+  {% include 'partials/navigation/posts-list.html' with { 'page' : './content/3.news' } %}
+{% endblock %}

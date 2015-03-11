@@ -1,0 +1,50 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <title>{{ page.website }} &mdash; {{ page.title }}</title>
+  <meta name="description" content="Europa is a London based graphic design studio.">
+
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="/templates/css/style.css">
+
+</head>
+<body class="{{ page.slug }} {% block bodyclass %}{% endblock %}">
+
+  <header id="page-header">
+  {% block header %}
+  <h1><a href="/">Euro<span class="p">p</span><span class="a">a</span></a></h1>
+    <nav>
+      {% include 'partials/navigation/navigation.html' %}
+    </nav>
+  {% endblock %}
+  </header>
+
+  <div class="main" role="main">
+  {% block main %}{% endblock %}
+  </div>
+
+  <div class="back-to-top"><a href="#page-header">top</a></div>
+
+  {% block script %}{% endblock %}
+
+  <!-- Piwik -->
+  <script type="text/javascript">
+  var pkBaseURL = (("https:" == document.location.protocol) ? "https://afn.so/analytics/" : "http://afn.so/analytics/");
+  document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+  </script><script type="text/javascript">
+  try {
+  var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+  piwikTracker.trackPageView();
+  piwikTracker.enableLinkTracking();
+  } catch( err ) {}
+  </script><noscript><p><img src="http://afn.so/analytics/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
+  <!-- End Piwik Tracking Code -->
+
+</body>
+</html>

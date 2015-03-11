@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% block bodyclass %}home{% endblock %}
+
 {% block main %}
   {% include 'partials/showcase-list.html' with { 'page' : './content/1.work' }  %}
 {% endblock %}

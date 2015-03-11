@@ -7,3 +7,8 @@ app/_cache/images/*
 !app/_cache/images/.gitignore
 
 logs
+
+content
+
+templates/bower_components
+templates/node_modules

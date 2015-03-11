@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+<section id="about">
+  <h1>About</h1>
+  {{ page.content }}
+</section>
+
+<section id="address">
+  <h1>Address</h1>
+  {{ page.address }}
+
+</section>
+
+<section id="workshops">
+  <h1>Workshops</h1>
+  {{ page.workshops }}
+</section>
+
+<section id="talks">
+  <h1>Talks</h1>
+  {{ page.talks }}
+</section>
+
+<section id="events">
+  <h1>Events</h1>
+  {{ page.events }}
+</section>
+
+{% endblock %}
