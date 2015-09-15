@@ -12,5 +12,10 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "slick-carousel": "slick.js#~1.5.8",
+    "waypoints": "~4.0.0"
+  }
 }

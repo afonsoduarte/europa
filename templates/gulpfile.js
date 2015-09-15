@@ -5,7 +5,7 @@ var gulp = require('gulp');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var sourcemaps = require('gulp-sourcemaps');
-
+var bower = require('gulp-main-bower-files');
 
 // load plugins
 var $ = require('gulp-load-plugins')();
@@ -30,7 +30,22 @@ gulp.task('scripts', function () {
         .pipe($.size());
 });
 
-gulp.task('watch', ['styles'], function () {
+// Copy bower files
+gulp.task('bower', function(){
+    return gulp.src('./bower.json')
+        .pipe(bower({
+            overrides: {
+                jquery: {
+                    main: [
+                        './dist/jquery.min.js'
+                    ]
+                }
+            }
+        }))
+        .pipe(gulp.dest('js/libs'));
+});
+
+gulp.task('watch', ['styles', 'bower'], function () {
 
     browserSync({
         proxy: "europaeuropa.dev"
