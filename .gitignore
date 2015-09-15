@@ -8,8 +8,6 @@ app/_cache/images/*
 
 logs
 
-content
-
 templates/bower_components
 templates/node_modules
 
