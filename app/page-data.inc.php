@@ -184,6 +184,29 @@ Class PageData {
     # page.video
     $page->video = Helpers::list_files($page->file_path, '/\.(mov|mp4|m4v)$/i', false);
 
+    # page.txt
+    $page->txt = Helpers::list_files($page->file_path, '/\.(txt)$/i', false);
+
+    # Save each txt file as page variable
+    foreach ( $page->data['txt'] as $filename => $file_path) {
+      $var_name = preg_replace('/\.(txt)/', '', $filename);
+      if(is_readable($file_path)) {
+        ob_start();
+        include $file_path;
+        $content = ob_get_contents();
+        ob_end_clean();
+
+        $relative_path = preg_replace('/^\.\//', Helpers::relative_root_path(), $page->file_path);
+
+        # replace the only var in your content - page.path for your inline html with images and stuff
+        if (is_string($content)) $content = preg_replace('/{{\s*path\s*}}/', $relative_path . '/', $content);
+
+        $page->$var_name = Markdown($content);
+      } else {
+        $page->$var_name = '';
+      }
+    }
+
     # page.swf, page.html, page.doc, page.pdf, page.mp3, etc.
     # create a variable for each file type included within the page's folder (excluding .yml files)
     $assets = self::get_file_types($page->file_path);
