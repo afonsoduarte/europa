@@ -64,7 +64,6 @@ $('.showcase')
       e.preventDefault();
     });
 
-// Europa.init();
 $('.images').slick();
 
 });
