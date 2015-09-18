@@ -45,7 +45,7 @@ class SLIRConfig extends SLIRConfigDefaults
 
 	public static function init()
 	{
-    self::$cacheDir = '../../../'.Config::$cache_folder.'/images';
+    self::$cacheDir = $_SERVER['DOCUMENT_ROOT'] . '/app/_cache/images'; //'../../../'.Config::$cache_folder.'/images';
     self::$documentRoot	= '../../..';
 		// This must be the last line of this function
 		parent::init();

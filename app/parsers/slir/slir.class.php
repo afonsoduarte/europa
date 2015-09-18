@@ -1130,7 +1130,7 @@ class SLIR
 		$this->initializeCache();
 
 		// Try to create just a symlink to minimize disk space
-		if ($symlinkToPath && function_exists('symlink') && (file_exists($cacheFilePath) || symlink('../'.$symlinkToPath, $cacheFilePath)))
+		if ($symlinkToPath && function_exists('symlink') && (file_exists($cacheFilePath) || symlink($symlinkToPath, $cacheFilePath)))
 		{
 			return TRUE;
 		}
