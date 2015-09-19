@@ -1,0 +1,58 @@
+// ==================== //
+// 4. NAV
+// ==================== //
+
+nav {
+  text-align: center;
+  h1 {
+    @include visuallyhidden;
+  }
+}
+ul#navigation {
+  text-align: center;
+  padding: $lineHeight 0;
+  display: inline;
+
+  li {
+    display: inline;
+    margin-right: 12px;
+
+    a {
+      border-bottom: 1px solid;
+    }
+
+    &:last-child{
+      margin-right: 0;
+    }
+
+    &.active a,
+    .home &.work a {
+        border-bottom: none;
+    }
+  }
+  
+  .view-cart-item {
+    // position: absolute;
+    // top: 0;
+    // right: 0;
+    display: block;
+    margin-top: -$lineHeight;
+    text-align: right;
+  }
+  
+  form {
+    display: inline;
+  }
+
+  .view-cart-btn {
+    background: transparent;
+    border: none;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    cursor: pointer;
+  }
+
+  ol.children {
+   @include visuallyhidden;
+  }
+}

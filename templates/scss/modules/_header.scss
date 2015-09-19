@@ -1,0 +1,22 @@
+// ==================== //
+// 3. HEADER
+// ==================== //
+
+#page-header {
+  padding-top: $lineHeight * 1.5;
+
+  h1 {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 0 $lineHeight/2;
+
+    a {
+      border-bottom: none;
+      letter-spacing: 0.1em;
+
+      .a {
+        margin-left: -0.1em;
+      }
+    }
+  }
+}

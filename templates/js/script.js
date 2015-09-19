@@ -2,69 +2,75 @@ $(document).keydown(function(event) {
 
   // LEFT
   if (event.which == 37) {
-    Europa.activeArticle.trigger('previousSlide');
+    $(window.location.hash).find(".slick-prev").trigger('click');
     event.preventDefault();
   }
   // DOWN
   else if (event.which == 40){
-    Europa.goToNextArticle();
+    Controller.goToNextArticle();
     event.preventDefault();
   }
   // UP
   else if (event.which == 38){
-    Europa.goToPreviousArticle();
+    Controller.goToPreviousArticle();
     event.preventDefault();
   }
   // RIGHT
   else if (event.which == 39){
-    Europa.activeArticle.trigger('nextSlide');
+    $(window.location.hash).find(".slick-next").trigger('click');
     event.preventDefault();
   }
 
   // i
   else if (event.which == 73){
-    Europa.activeArticle.toggleClass('description-active');
+    $(window.location.hash).toggleClass('description-active');
   }
   // ESC
   else if (event.which == 27){
-    Europa.activeArticle.removeClass('description-active');
+    $(window.location.hash).removeClass('description-active');
   }
 
 });
 
 $(function() {
 
-$('.showcase')
-  .find('article')
-  .each(function(){
-    new Waypoint({
-      element: $(this)[0],
-      handler: function(d) {
-        Europa.updateURL(this.element.id);
-      }
+  $('.showcase article')
+    .each(function(){
+      new Waypoint({
+        element: $(this)[0],
+        handler: function(d) {
+          history.pushState(null,null,'#'+this.element.id);
+        }
+      });
     });
-  })
-  .find('.description')
-    .css('margin-bottom', function(){
-      return - $(this).height()/2;
-    })
-    .append('<a role="button" class="close-btn">✕</a>')
-      .find('.close-btn')
-      .click(function() {
-        $(this).parents('article').toggleClass('description-active');
-      })
-      .end()
-    .end()
-  // DESCRIPTION TOGGLE
-  .find('.read-more')
-    .click(function(e){
-      $(this)
-        .parents('article')
-          .toggleClass('description-active');
+
+  $('.close-btn,.read-more')
+    .click(function(e) {
+      $(this).parents('article').toggleClass('description-active');
       e.preventDefault();
     });
 
-$('.images').slick();
+  $('.images').on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
+        if(slick.slideCount < 2) return;
+        if(event.type === "init") {
+          $(this)
+            .addClass('slick-active')
+            .append('<div class="slick-counter"></div>');
+        }
+        //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+        var i = (currentSlide ? currentSlide : 0) + 1;
+        var text = i + '/' + slick.slideCount;
+        $(this).find('.slick-counter').text(text);
+      });
+
+  $('.images').slick();
+
+  // Disable gallery arrow buttons for
+  // touch screens 
+  if ('ontouchstart' in window) {
+    $('.slick-arrow').hide();
+  }
+
 
 });
 

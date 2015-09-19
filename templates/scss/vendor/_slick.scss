@@ -4,14 +4,8 @@
     position: relative;
     display: block;
     box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
+
     user-select: none;
-    -ms-touch-action: pan-y;
     touch-action: pan-y;
     -webkit-tap-highlight-color: transparent;
 }
@@ -33,10 +27,6 @@
 }
 .slick-slider .slick-track,
 .slick-slider .slick-list {
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    -o-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
 }
 
@@ -44,7 +34,9 @@
     position: relative;
     left: 0;
     top: 0;
-    display: block;
+    // display: block;
+    display: flex;
+    align-items: center;
 
     &:before,
     &:after {
@@ -64,11 +56,14 @@
     float: left;
     height: 100%;
     min-height: 1px;
+
     [dir="rtl"] & {
         float: right;
     }
     img {
+        max-width: 100%;
         display: block;
+        margin: 0 auto;
     }
     &.slick-loading img {
         display: none;

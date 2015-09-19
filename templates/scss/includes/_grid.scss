@@ -1,0 +1,32 @@
+// ==================== //
+// 0. Variables
+// ==================== //
+
+$columnWidth: 45px;
+$gutter: 40px;
+$lineHeight: 24px; //baseline
+$fontSize: 18px; //16px
+$smallFontSize: .8125em; //13px | .875em; //14px
+
+@mixin small-size {
+  font-size: $smallFontSize;
+  line-height: 20px;
+}
+
+@function column_width($n) {
+  @return ( $n * ( $columnWidth + $gutter ) ) - $gutter;
+}
+
+@mixin columns($n) {
+  width: column_width($n);
+  margin-left: $gutter;
+  float: left;
+}
+
+@mixin full_width {
+  width: column_width(12) + $gutter;
+}
+
+@mixin shift($n) {
+  margin-left: column_width($n) + $gutter;
+}

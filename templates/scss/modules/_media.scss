@@ -1,0 +1,105 @@
+.media {
+  margin: 0 auto $lineHeight;
+  text-align: center;
+}
+
+.slick-counter {
+  margin-top: $lineHeight;
+  @include small-size;
+}
+
+// Prev and Next Buttons
+@mixin btn {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-size: 0;
+  background: rgba(0,0,0,0);
+
+  .lt-ie9 & {
+    background: white;
+  }
+}
+
+// Prev next arrows for projects
+@mixin project-btn {
+  @include btn;
+  height: 50px;
+  width: 50px;
+  bottom: 50%;
+  position: absolute;
+  z-index: 9;
+  padding: 0;
+
+  &:before {
+    content: "";
+    background-repeat: no-repeat;
+    background-image: url('/arrows.png');
+    width: 45px;
+    height: 50px;
+    display: inline-block;
+  }
+}
+
+.project {
+  .slick-prev {
+    @include project-btn;
+    left: 20px;
+    text-align: left;
+    &:before{
+      background-position: top left;
+    }
+  }
+
+  .slick-next {
+    @include project-btn;
+    right: 20px;
+    text-align: right;
+    &:before{
+      background-position: top right;
+    }
+  }
+}
+
+
+// Arrows for Products
+@mixin product-btn {
+  @include btn;
+  // float: left;
+  padding: 0 20px;
+  &:before {
+    content: "\2190";
+    font-size: 1.25rem;
+    display: inline-block;
+  }
+}
+
+.product {
+  .images {
+    text-align: center;
+    button {
+      @include product-btn;
+    }
+
+    .slick-next{
+      // float: left;
+      // margin-left: 20px;
+      &:before {
+        content: "\2192";
+      }
+    }
+    &:after{
+      content: "";
+      clear: left;
+      display: table;
+    }
+  }
+
+  .slick-counter {
+    // position: absolute;
+    // margin-left: 33px;
+    text-align: center;
+    margin-top: - $lineHeight - 1px;
+    line-height: $lineHeight;
+  }
+}

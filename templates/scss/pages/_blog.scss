@@ -1,0 +1,42 @@
+//// 5.4 Blog page ////
+.blog {
+  .main {
+  }
+  article {
+    clear: both;
+    width: column_width(6);
+    margin: (3 * $lineHeight) auto (6 * $lineHeight);
+    @include cf;
+
+    header {
+      margin-top: $lineHeight/2;
+      margin-left: 0;
+      text-align: center;
+
+      time {
+        @include small-size;
+
+      }
+
+      h1 {
+        margin: 3px 0 $lineHeight;
+      }
+    }
+
+    .content {
+      @include columns(6);
+      margin-left: 0;
+    }
+
+    .media {
+      width: column_width(6);
+      text-align: center;
+
+      ul.images {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+}

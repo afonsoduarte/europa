@@ -1,18 +1,30 @@
-@import "vendor/slick";
-
-// Utilities mixins (mostly vendor prefixes)
-@import "includes/utilities";
-
-
-// normalize.css 2012-02-07T12:37 UTC - http://github.com/necolas/normalize.css
-@import "includes/normalize";
-
 // Import fonts
-@import "includes/fonts";
+@import "../../fonts.css";
 
-// Import rules that are the same for all screen sizes
-@import "includes/base";
+@import 
+  "vendor/slick";
 
+// Includes
+@import 
+  "includes/utilities",
+  "includes/grid",
+  "includes/base";
+
+// Modules
+@import 
+  "modules/header",
+  "modules/media",
+  "modules/nav";
+
+// Pages
+@import 
+  "pages/about",
+  "pages/blog",
+  "pages/index",
+  "pages/showcase";
+
+// Chrome Frame Prompt (IE only, but left here so far)
+.chromeframe { margin: 0.2em 0; background: #ccc; color: black; padding: 0.2em 0; }
 
 // Print styles
 @import "includes/print";

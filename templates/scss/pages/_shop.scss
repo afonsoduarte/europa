@@ -1,0 +1,112 @@
+//// Shop Page ////
+
+section.shop-list {
+  padding-top: $lineHeight;
+
+  img {
+    max-width: 100%;
+  }
+
+  .product-group {
+    clear: both;
+
+    margin-left: 0;
+    margin-bottom: $lineHeight * 2;
+    
+    > .image {
+      text-align: center;
+    }
+
+    .project-title {
+      text-align: center;
+    }
+
+    > .description {
+      text-align: center;
+      margin-bottom: $lineHeight*2;
+    }
+  }
+
+  .product {
+    margin-bottom: $lineHeight * 2;
+
+    @include respond-to(tablet) {
+      @include columns(4);
+
+      &:nth-of-type(3n + 1){
+        margin-left: 0;
+        clear: left;
+      }
+    }
+
+
+    .project-title {
+      margin: 0 0 $lineHeight/2;
+      text-align: left;
+    }
+
+    .description {
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    .images {
+      padding: 0 0 $lineHeight;
+    }
+
+    .images.slick-active {
+      padding: 0;
+    }
+  }
+}
+
+
+
+form[target=paypal] {
+  margin-top: $lineHeight;
+
+  table {
+    width: 100%;
+    border-spacing: 0;
+  }
+
+  td {
+    padding: 0;
+    margin: 0;
+  }
+
+  select {
+    // border: 1px solid;
+    // border-radius: 0;
+    // background: white;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+  }
+
+  button {
+    border: none;
+    border-radius: 0;
+    background: white;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    padding: 0;
+    cursor: pointer;
+    border-bottom: 1px solid;
+    margin-top: $lineHeight/2;
+  }
+}
+
+.product {
+  h1 {
+    text-align: center;
+  }
+
+  p {
+    max-width: 33em;
+    margin: 0 auto;
+  }
+}
+
+.minicart-item a {
+  border-bottom: none;
+}

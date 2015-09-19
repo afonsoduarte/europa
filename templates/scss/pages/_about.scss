@@ -1,0 +1,49 @@
+//// 5.3 About Page ////
+.about {
+
+  p + p {
+    text-indent: 1.5em;
+  }
+
+  .main {
+    @include full_width;
+    margin: 0 0 0 (- $gutter);
+
+    section {
+      @include columns(4);
+      float: left;
+
+      &#about {
+        @include columns(8);
+        margin-bottom: $lineHeight;
+      }
+
+      &#address {
+        //@include shift(2);
+      }
+
+      &#workshops {
+        clear: left;
+      }
+
+      h1 {
+        margin: $lineHeight 0;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+      }
+
+      h1 + h2 {
+        margin-top: 0;
+      }
+
+      p + h1 {
+        margin-top: 2 * $lineHeight;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+    }
+  }
+}

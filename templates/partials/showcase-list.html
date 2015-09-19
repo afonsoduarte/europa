@@ -1,7 +1,7 @@
   {% if page.children %}
     <section class="showcase">
     {% for child in page.children|reverse %}
-      <article id="id-{{ child.slug }}">
+      <article id="id-{{ child.slug }}" class="project">
           <div class="content">
             {% include 'partials/assets/media.html' with {'page' : child} %}
             <div class="description">

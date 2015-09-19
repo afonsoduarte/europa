@@ -1,0 +1,144 @@
+/* GROTESQUE MT */
+
+/* Bold */
+@font-face{
+font-family:"Grotesque MT";
+src:url("Fonts/a2bca959-0165-4a21-8869-a49b2db3f396.eot?iefix") format("eot");
+font-weight: bold;
+font-style: normal;
+}
+@font-face{
+font-family:"Grotesque MT";
+src:url("Fonts/a2bca959-0165-4a21-8869-a49b2db3f396.eot?iefix");
+src:url("Fonts/f3507fa6-d8dd-43ff-ab04-8ab9f8848e06.woff") format("woff"),url("Fonts/9a9482f8-3a6a-4395-afde-0dace8497517.ttf") format("truetype"),url("Fonts/c0cf6a10-1842-4bd5-ac1d-32f8a4d01cb5.svg#c0cf6a10-1842-4bd5-ac1d-32f8a4d01cb5") format("svg");
+font-weight: bold;
+font-style: normal;
+}
+
+/* Italic */
+
+@font-face{
+font-family:"Grotesque MT";
+src:url("Fonts/de8f284b-9da1-4a23-af58-c615623943b0.eot?iefix") format("eot");
+font-weight: normal;
+font-style: italic;
+}
+@font-face{
+font-family:"Grotesque MT";
+src:url("Fonts/de8f284b-9da1-4a23-af58-c615623943b0.eot?iefix");
+src:url("Fonts/22152e1e-9a36-4dae-b94c-9310a614a4fc.woff") format("woff"),url("Fonts/067a14aa-5802-42cb-a60b-c4722e778ec7.ttf") format("truetype"),url("Fonts/519c74d6-1c04-4c5c-8396-47afdca65614.svg#519c74d6-1c04-4c5c-8396-47afdca65614") format("svg");
+font-weight: normal;
+font-style: italic;
+}
+
+/* Regular */
+
+@font-face{
+font-family:"Grotesque MT";
+src:url("Fonts/65853259-eeb9-4157-a862-98c4ded7c991.eot?iefix") format("eot");
+font-weight: normal;
+font-style: normal;
+}
+@font-face{
+font-family:"Grotesque MT";
+src:url("Fonts/65853259-eeb9-4157-a862-98c4ded7c991.eot?iefix");
+src:url("Fonts/a9e53c4b-8f83-4ba6-8e3e-18f71102796f.woff") format("woff"),url("Fonts/80c7df44-1dc6-4998-80ef-666fa026c9ea.ttf") format("truetype"),url("Fonts/483c1f7d-0832-4465-9402-521ebc3754e3.svg#483c1f7d-0832-4465-9402-521ebc3754e3") format("svg");
+font-weight: normal;
+font-style: normal;
+}
+
+/* ClassicGrotesqueW01 Book */
+
+@font-face{
+font-family:"ClassicGrotesqueW01-Bk";
+src:url("Fonts/61f1f16a-4a72-4c60-93ba-aa8ab19f8652.eot?iefix") format("eot");
+font-weight: normal;
+font-style: normal;
+}
+@font-face{
+font-family:"ClassicGrotesqueW01-Bk";
+src:url("Fonts/61f1f16a-4a72-4c60-93ba-aa8ab19f8652.eot?iefix");
+src:url("Fonts/41d33820-6252-4164-a857-0814a1fd2302.woff") format("woff"),url("Fonts/32e51bed-d726-44f8-ad5a-91b848435a51.ttf") format("truetype"),url("Fonts/3ed6a677-a8c3-4fa4-a0fe-62ce687b5fb0.svg#3ed6a677-a8c3-4fa4-a0fe-62ce687b5fb0") format("svg");
+font-weight: normal;
+font-style: normal;
+}
+
+/* ClassicGrotesqueW01 Book Italic */
+
+@font-face{
+font-family:"ClassicGrotesqueW01-Bk";
+src:url("Fonts/98fef7b4-1337-4df5-b297-f4e2375bc2fe.eot?iefix") format("eot");
+font-weight: normal;
+font-style: italic;
+}
+@font-face{
+font-family:"ClassicGrotesqueW01-Bk";
+src:url("Fonts/98fef7b4-1337-4df5-b297-f4e2375bc2fe.eot?iefix");
+src:url("Fonts/813cab7b-0a4e-4973-8278-af66df24ea8e.woff") format("woff"),url("Fonts/b08e6609-2511-465f-bd1f-7f1f2cad1bfe.ttf") format("truetype"),url("Fonts/cbdd13a3-c1c8-4f4e-b760-d027985b9a33.svg#cbdd13a3-c1c8-4f4e-b760-d027985b9a33") format("svg");
+font-weight: normal;
+font-style: italic;
+}
+
+/* ClassicGrotesqueW01 Regular */
+
+@font-face{
+font-family:"ClassicGrotesqueW01";
+src:url("Fonts/99898fd0-33c7-482e-ae03-d8598f04cd57.eot?iefix") format("eot");
+font-weight: normal;
+font-style: normal;
+}
+@font-face{
+font-family:"ClassicGrotesqueW01";
+src:url("Fonts/99898fd0-33c7-482e-ae03-d8598f04cd57.eot?iefix");
+src:url("Fonts/c6b0c4e7-468c-4416-bf4f-c8254e52ec05.woff") format("woff"),url("Fonts/f3d24aab-e54a-40b1-b3cc-5842d107509b.ttf") format("truetype"),url("Fonts/f0e7972c-6809-4a5c-857d-d3cd6d9c2dcf.svg#f0e7972c-6809-4a5c-857d-d3cd6d9c2dcf") format("svg");
+font-weight: normal;
+font-style: normal;
+}
+
+/* ClassicGrotesqueW01 Regular Italic */
+
+@font-face{
+font-family:"ClassicGrotesqueW01";
+src:url("Fonts/f7e6a0c0-aa75-4ef2-b917-b0fd8209ab56.eot?iefix") format("eot");
+font-weight: normal;
+font-style: italic;
+}
+@font-face{
+font-family:"ClassicGrotesqueW01";
+src:url("Fonts/f7e6a0c0-aa75-4ef2-b917-b0fd8209ab56.eot?iefix");
+src:url("Fonts/1f7cd237-bbbf-4514-92e5-e4917b9fee1c.woff") format("woff"),url("Fonts/777df9a4-2e0d-48f8-9eac-48e2d53e3daa.ttf") format("truetype"),url("Fonts/9c1d2322-bb9f-4d16-b473-983e668ce34e.svg#9c1d2322-bb9f-4d16-b473-983e668ce34e") format("svg");
+font-weight: normal;
+font-style: italic;
+}
+
+/* ClassicGrotesqueW01 Medium */
+
+@font-face{
+font-family:"ClassicGrotesqueW01-Md";
+src:url("Fonts/299895da-b451-41f9-960c-024373a276bc.eot?iefix") format("eot");
+font-weight: normal;
+font-style: normal;
+}
+@font-face{
+font-family:"ClassicGrotesqueW01-Md";
+src:url("Fonts/299895da-b451-41f9-960c-024373a276bc.eot?iefix");
+src:url("Fonts/f94b2377-9dc9-4479-9f47-fe1c6c0f8bb8.woff") format("woff"),url("Fonts/722de522-eea2-4ead-a0eb-fc1aba0e77ba.ttf") format("truetype"),url("Fonts/e84a807b-c1a1-4cb7-b3a5-5668829ba868.svg#e84a807b-c1a1-4cb7-b3a5-5668829ba868") format("svg");
+font-weight: normal;
+font-style: normal;
+}
+
+/* ClassicGrotesqueW01 Medium Italic */
+
+@font-face{
+font-family:"ClassicGrotesqueW01-Md";
+src:url("Fonts/2723a598-2155-4a48-a08b-d6da5d3729d7.eot?iefix") format("eot");
+font-weight: normal;
+font-style: italic;
+}
+@font-face{
+font-family:"ClassicGrotesqueW01-Md";
+src:url("Fonts/2723a598-2155-4a48-a08b-d6da5d3729d7.eot?iefix");
+src:url("Fonts/c460b776-24e2-47f4-a932-3ee0ae1057f5.woff") format("woff"),url("Fonts/fa7db186-2745-4aae-9cf9-69f59bb62fe2.ttf") format("truetype"),url("Fonts/36a863d2-2429-4da3-8447-57249c673a65.svg#36a863d2-2429-4da3-8447-57249c673a65") format("svg");
+font-weight: normal;
+font-style: italic;
+}
