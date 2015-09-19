@@ -1,11 +1,10 @@
-// Import fonts
-@import "../../fonts.css";
-
+// Vendor
 @import 
   "vendor/slick";
 
 // Includes
 @import 
+  "includes/fonts",
   "includes/utilities",
   "includes/grid",
   "includes/base";
