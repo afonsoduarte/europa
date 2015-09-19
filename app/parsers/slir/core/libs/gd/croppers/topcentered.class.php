@@ -1,6 +1,6 @@
 <?php
 /**
- * Main file for SLIR (Smart Lencioni Image Resizer)
+ * Class definition file for the top/centered SLIR cropper
  *
  * This file is part of SLIR (Smart Lencioni Image Resizer).
  *
@@ -28,10 +28,30 @@
  * @license MIT
  * @since 2.0
  * @package SLIR
+ * @subpackage Croppers
  */
 
-// define('SLIR_CONFIG_FILENAME', 'slir-config-alternate.php');
+require_once 'centered.class.php';
 
-require_once 'core/slir.class.php';
-$slir = new SLIR();
-$slir->processRequestFromURL();
+/**
+ * Top/centered SLIR cropper
+ *
+ * Calculates the crop offset anchored in the top of the image if the top and bottom are being cropped, or the center of the image if the left and right are being cropped
+ *
+ * @since 2.0
+ * @author Joe Lencioni <joe@shiftingpixel.com>
+ * @package SLIR
+ * @subpackage Croppers
+ */
+class SLIRCropperTopcentered extends SLIRCropperCentered
+{
+  /**
+   * @since 2.0
+   * @param SLIRImage $image
+   * @return integer
+   */
+  public function getCropY(SLIRImage $image)
+  {
+    return 0;
+  }
+}

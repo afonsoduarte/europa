@@ -3,7 +3,7 @@
      }'>
 {% for image in page.images %}
   <div class="image">
-    <img {% if loop.index == 1 %}src{% else %}data-lazy{% endif %}="{{ resize_path(image.url,9999,600,'0') }}" 
+    <img {% if loop.index == 1 %}src{% else %}data-lazy{% endif %}="{{ resize_path(image.url,9999,600) }}" 
       alt="{{ page.title }}" >
   </div>
 {% endfor %}

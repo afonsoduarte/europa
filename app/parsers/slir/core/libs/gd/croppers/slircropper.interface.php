@@ -1,6 +1,6 @@
 <?php
 /**
- * Main file for SLIR (Smart Lencioni Image Resizer)
+ * Interface definition file for SLIR croppers
  *
  * This file is part of SLIR (Smart Lencioni Image Resizer).
  *
@@ -28,10 +28,23 @@
  * @license MIT
  * @since 2.0
  * @package SLIR
+ * @subpackage Croppers
  */
 
-// define('SLIR_CONFIG_FILENAME', 'slir-config-alternate.php');
-
-require_once 'core/slir.class.php';
-$slir = new SLIR();
-$slir->processRequestFromURL();
+/**
+ * SLIR cropper interface
+ *
+ * @since 2.0
+ * @author Joe Lencioni <joe@shiftingpixel.com>
+ * @package SLIR
+ * @subpackage Croppers
+ */
+interface SLIRCropper
+{
+  /**
+   * @since 2.0
+   * @param SLIRImage $image
+   * @return array Associative array with the keys of x, y, width, and height that specify the box that should be cropped
+   */
+  public function getCrop(SLIRImage $image);
+}
