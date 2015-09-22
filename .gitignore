@@ -12,3 +12,5 @@ templates/bower_components
 templates/node_modules
 
 .sass-cache
+
+content
