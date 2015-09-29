@@ -1,3 +1,9 @@
+  <script>
+  // Remove no-js class
+  var reJS = new RegExp('(^|\\s)no-js(\\s|$)');
+  document.documentElement.className = document.documentElement.className.replace(reJS, '$1js$2');
+  </script>
+
   <script src="{{ page.root_path }}templates/js/libs/jquery/dist/jquery.min.js"></script>
   <script src="{{ page.root_path }}templates/js/libs/slick-carousel/slick/slick.min.js"></script>
   <script src="{{ page.root_path }}templates/js/libs/waypoints/lib/noframework.waypoints.js"></script>

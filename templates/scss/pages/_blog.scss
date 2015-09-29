@@ -1,7 +1,5 @@
 //// 5.4 Blog page ////
 .blog {
-  .main {
-  }
   article {
     clear: both;
     width: column_width(6);
@@ -11,11 +9,10 @@
     header {
       margin-top: $lineHeight/2;
       margin-left: 0;
-      text-align: center;
+      text-align: left;
 
       time {
         @include small-size;
-
       }
 
       h1 {
@@ -30,7 +27,7 @@
 
     .media {
       width: column_width(6);
-      text-align: center;
+      text-align: left;
 
       ul.images {
         list-style: none;
