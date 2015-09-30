@@ -18,13 +18,14 @@ $smallFontSize: .8125em; //13px | .875em; //14px
 }
 
 @mixin columns($n) {
-  width: column_width($n);
+  max-width: column_width($n);
   margin-left: $gutter;
   float: left;
 }
 
 @mixin full_width {
-  width: column_width(12) + $gutter;
+  max-width: column_width(12) + $gutter;
+  padding: 0 $gutter/4;
 }
 
 @mixin shift($n) {

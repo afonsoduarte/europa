@@ -318,15 +318,16 @@ ul#navigation {
 .about p + p {
   text-indent: 1.5em; }
 .about .main {
-  width: 1020px;
+  max-width: 1020px;
+  padding: 0 10px;
   margin: 0 0 0 -40px; }
   .about .main section {
-    width: 300px;
+    max-width: 300px;
     margin-left: 40px;
     float: left;
     float: left; }
     .about .main section#about {
-      width: 640px;
+      max-width: 640px;
       margin-left: 40px;
       float: left;
       margin-bottom: 24px; }
@@ -346,7 +347,7 @@ ul#navigation {
 
 .blog article {
   clear: both;
-  width: 470px;
+  max-width: 470px;
   margin: 72px auto 144px;
   zoom: 1; }
   .blog article:before, .blog article:after {
@@ -357,24 +358,34 @@ ul#navigation {
   .blog article header {
     margin-top: 12px;
     margin-left: 0;
-    text-align: left; }
+    text-align: left;
+    padding: 0 10px; }
     .blog article header time {
       font-size: 0.8125em;
       line-height: 20px; }
     .blog article header h1 {
-      margin: 3px 0 24px; }
+      margin: 3px 0 24px;
+      font-weight: normal;
+      text-transform: uppercase;
+      letter-spacing: 0.1em; }
   .blog article .content {
-    width: 470px;
+    max-width: 470px;
     margin-left: 40px;
     float: left;
-    margin-left: 0; }
+    margin-left: 0;
+    padding: 0 10px; }
   .blog article .media {
-    width: 470px;
+    max-width: 470px;
     text-align: left; }
-    .blog article .media ul.images {
-      list-style: none;
-      margin: 0;
-      padding: 0; }
+    @media only screen and (min-width: 600px) {
+      .blog article .media {
+        padding: 0 10px; } }
+  .blog article ul.images {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+  .blog article img {
+    max-width: 100%; }
 
 ul.projects {
   list-style: none;
@@ -435,6 +446,8 @@ section.showcase {
     section.showcase article .description {
       padding: 12px 40px 0 0;
       text-align: left; }
+  section.showcase img {
+    max-width: 100%; }
 
 .js .image:not(.slick-slide):not(:first-child), img.slick-loading {
   opacity: 0;
@@ -456,9 +469,10 @@ section.showcase article {
       display: none; }
   section.showcase article .description {
     display: none;
-    padding: 24px; }
+    padding: 24px 10px; }
     @media only screen and (min-width: 600px) {
       section.showcase article .description {
+        padding: 24px;
         position: absolute;
         top: 50%;
         -webkit-transform: translateY(-50%);
@@ -476,8 +490,9 @@ section.showcase article {
     display: block; }
   section.showcase article.description-active .read-more .more {
     display: none; }
-  section.showcase article.description-active .read-more .less {
-    display: inline; }
+  @media only screen and (min-width: 600px) {
+    section.showcase article.description-active .read-more .less {
+      display: inline; } }
 
 @media print {
   /* Black prints faster: h5bp.com/s */

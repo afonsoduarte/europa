@@ -2,7 +2,7 @@
 .blog {
   article {
     clear: both;
-    width: column_width(6);
+    max-width: column_width(6);
     margin: (3 * $lineHeight) auto (6 * $lineHeight);
     @include cf;
 
@@ -10,6 +10,7 @@
       margin-top: $lineHeight/2;
       margin-left: 0;
       text-align: left;
+      padding: 0 $gutter/4;
 
       time {
         @include small-size;
@@ -17,23 +18,34 @@
 
       h1 {
         margin: 3px 0 $lineHeight;
+        font-weight: normal;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
       }
     }
 
     .content {
       @include columns(6);
       margin-left: 0;
+      padding: 0 $gutter/4;
     }
 
     .media {
-      width: column_width(6);
+      max-width: column_width(6);
       text-align: left;
-
-      ul.images {
-        list-style: none;
-        margin: 0;
-        padding: 0;
+      @include respond-to(tablet) {
+        padding: 0 $gutter/4;
       }
+    }
+
+    ul.images {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    img {
+      max-width: 100%;
     }
   }
 }

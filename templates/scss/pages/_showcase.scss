@@ -40,6 +40,10 @@ section.showcase {
       text-align: left;
     }
   }
+
+  img {
+    max-width: 100%;
+  }
 }
 
 // js enabled //
@@ -67,9 +71,10 @@ section.showcase {
 
     .description {
       display: none;
-      padding: $lineHeight;
+      padding: $lineHeight $gutter/4;
 
       @include respond-to(tablet) {
+        padding: $lineHeight;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -91,8 +96,10 @@ section.showcase {
         .more {
           display: none;
         }
-        .less {
-          display: inline;
+        @include respond-to(tablet) {
+          .less {
+            display: inline;
+          }
         }
       }
     }
