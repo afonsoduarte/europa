@@ -57,6 +57,10 @@
     height: 100%;
     min-height: 1px;
 
+    &:focus {
+        outline: none;
+    }
+
     [dir="rtl"] & {
         float: right;
     }

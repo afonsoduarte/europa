@@ -47,6 +47,8 @@
   height: 100%;
   min-height: 1px;
   display: none; }
+  .slick-slide:focus {
+    outline: none; }
   [dir="rtl"] .slick-slide {
     float: right; }
   .slick-slide img {
@@ -198,8 +200,8 @@ a {
   font-size: 0;
   background: rgba(0, 0, 0, 0);
   height: 50px;
-  width: 50px;
   bottom: 50%;
+  width: 5%;
   position: absolute;
   z-index: 9;
   padding: 0;
@@ -223,8 +225,8 @@ a {
   font-size: 0;
   background: rgba(0, 0, 0, 0);
   height: 50px;
-  width: 50px;
   bottom: 50%;
+  width: 5%;
   position: absolute;
   z-index: 9;
   padding: 0;
@@ -347,7 +349,7 @@ ul#navigation {
 
 .blog article {
   clear: both;
-  max-width: 470px;
+  max-width: 555px;
   margin: 72px auto 144px;
   zoom: 1; }
   .blog article:before, .blog article:after {
@@ -360,22 +362,18 @@ ul#navigation {
     margin-left: 0;
     text-align: left;
     padding: 0 10px; }
-    .blog article header time {
-      font-size: 0.8125em;
-      line-height: 20px; }
     .blog article header h1 {
       margin: 3px 0 24px;
       font-weight: normal;
       text-transform: uppercase;
       letter-spacing: 0.1em; }
   .blog article .content {
-    max-width: 470px;
+    max-width: 555px;
     margin-left: 40px;
     float: left;
     margin-left: 0;
     padding: 0 10px; }
   .blog article .media {
-    max-width: 470px;
     text-align: left; }
     @media only screen and (min-width: 600px) {
       .blog article .media {

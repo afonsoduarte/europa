@@ -11,6 +11,7 @@
 // Prev and Next Buttons
 @mixin btn {
   cursor: pointer;
+  // cursor: url('../images/cursor.png'), auto;
   border: none;
   outline: none;
   font-size: 0;
@@ -24,9 +25,14 @@
 // Prev next arrows for projects
 @mixin project-btn {
   @include btn;
-  height: 50px;
-  width: 50px;
+  height: 50px; 
   bottom: 50%;
+  width: 5%;
+
+  // height: 100%;
+  // width: 50%;
+  // bottom: 0;
+
   position: absolute;
   z-index: 9;
   padding: 0;
@@ -65,7 +71,6 @@
 // Arrows for Products
 @mixin product-btn {
   @include btn;
-  // float: left;
   padding: 0 20px;
   &:before {
     content: "\2190";
@@ -82,8 +87,6 @@
     }
 
     .slick-next{
-      // float: left;
-      // margin-left: 20px;
       &:before {
         content: "\2192";
       }
@@ -96,8 +99,6 @@
   }
 
   .slick-counter {
-    // position: absolute;
-    // margin-left: 33px;
     text-align: center;
     margin-top: - $lineHeight - 1px;
     line-height: $lineHeight;
