@@ -2,7 +2,7 @@
 .blog {
   article {
     clear: both;
-    max-width: column_width(6);
+    max-width: column_width(7);
     margin: (3 * $lineHeight) auto (6 * $lineHeight);
     @include cf;
 
@@ -13,7 +13,7 @@
       padding: 0 $gutter/4;
 
       time {
-        @include small-size;
+        // @include small-size;
       }
 
       h1 {
@@ -25,13 +25,12 @@
     }
 
     .content {
-      @include columns(6);
+      @include columns(7);
       margin-left: 0;
       padding: 0 $gutter/4;
     }
 
     .media {
-      max-width: column_width(6);
       text-align: left;
       @include respond-to(tablet) {
         padding: 0 $gutter/4;
