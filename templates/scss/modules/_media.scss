@@ -10,8 +10,8 @@
 
 // Prev and Next Buttons
 @mixin btn {
-  cursor: pointer;
-  // cursor: url('../images/cursor.png'), auto;
+  // cursor: pointer;
+  cursor: url('../images/cursor.png'), e-resize;
   border: none;
   outline: none;
   font-size: 0;
@@ -25,20 +25,20 @@
 // Prev next arrows for projects
 @mixin project-btn {
   @include btn;
-  height: 50px; 
-  bottom: 50%;
-  width: 5%;
+  // height: 50px; 
+  // bottom: 50%;
+  // width: 5%;
 
-  // height: 100%;
-  // width: 50%;
-  // bottom: 0;
+  height: 100%;
+  width: 50%;
+  bottom: 0;
 
   position: absolute;
   z-index: 9;
   padding: 0;
 
   &:before {
-    content: "";
+    // content: "";
     background-repeat: no-repeat;
     background-image: url('/arrows.png');
     width: 45px;
@@ -50,6 +50,8 @@
 .project {
   .slick-prev {
     @include project-btn;
+    cursor: url('../images/left-arrow.png'), e-resize;
+
     left: 20px;
     text-align: left;
     &:before{
@@ -59,6 +61,8 @@
 
   .slick-next {
     @include project-btn;
+    cursor: url('../images/right-arrow.png'), w-resize;
+
     right: 20px;
     text-align: right;
     &:before{

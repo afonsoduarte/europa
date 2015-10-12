@@ -72,18 +72,7 @@ h1, h2, h3, h4, b, strong {
   font-weight: normal; }
 
 html {
-  margin: 0 auto;
-  background: #c7e0de;
-  /* Old browsers */
-  /* FF3.6+ */
-  /* Chrome,Safari4+ */
-  /* Chrome10+,Safari5.1+ */
-  /* Opera 11.10+ */
-  /* IE10+ */
-  background: linear-gradient(to bottom, #c7e0de 0%, #f7f2d2 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c7e0de', endColorstr='#f7f2d2',GradientType=0 );
-  /* IE6-9 */ }
+  margin: 0 auto; }
 
 body {
   font-family: 'Arial', sans-serif;
@@ -194,23 +183,23 @@ a {
   line-height: 20px; }
 
 .project .slick-prev {
-  cursor: pointer;
+  cursor: url('../images/cursor.png'), e-resize;
   border: none;
   outline: none;
   font-size: 0;
   background: rgba(0, 0, 0, 0);
-  height: 50px;
-  bottom: 50%;
-  width: 5%;
+  height: 100%;
+  width: 50%;
+  bottom: 0;
   position: absolute;
   z-index: 9;
   padding: 0;
+  cursor: url('../images/left-arrow.png'), e-resize;
   left: 20px;
   text-align: left; }
   .lt-ie9 .project .slick-prev {
     background: white; }
   .project .slick-prev:before {
-    content: "";
     background-repeat: no-repeat;
     background-image: url('/arrows.png');
     width: 45px;
@@ -219,23 +208,23 @@ a {
   .project .slick-prev:before {
     background-position: top left; }
 .project .slick-next {
-  cursor: pointer;
+  cursor: url('../images/cursor.png'), e-resize;
   border: none;
   outline: none;
   font-size: 0;
   background: rgba(0, 0, 0, 0);
-  height: 50px;
-  bottom: 50%;
-  width: 5%;
+  height: 100%;
+  width: 50%;
+  bottom: 0;
   position: absolute;
   z-index: 9;
   padding: 0;
+  cursor: url('../images/right-arrow.png'), w-resize;
   right: 20px;
   text-align: right; }
   .lt-ie9 .project .slick-next {
     background: white; }
   .project .slick-next:before {
-    content: "";
     background-repeat: no-repeat;
     background-image: url('/arrows.png');
     width: 45px;
@@ -247,7 +236,7 @@ a {
 .product .images {
   text-align: center; }
   .product .images button {
-    cursor: pointer;
+    cursor: url('../images/cursor.png'), e-resize;
     border: none;
     outline: none;
     font-size: 0;
