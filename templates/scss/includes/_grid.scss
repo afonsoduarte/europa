@@ -26,6 +26,9 @@ $smallFontSize: .8125em; //13px | .875em; //14px
 @mixin full_width {
   max-width: column_width(12) + $gutter;
   padding: 0 $gutter/4;
+  @include respond-to(tablet) {
+    padding: 0;
+  }
 }
 
 @mixin shift($n) {

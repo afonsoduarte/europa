@@ -79,6 +79,7 @@ body {
   font-size: 18px;
   line-height: 24px;
   margin: 0 auto;
+  background: #ebebeb;
   max-width: 980px;
   zoom: 1; }
   body.home {
@@ -312,10 +313,12 @@ ul#navigation {
   max-width: 1020px;
   padding: 0 10px;
   margin: 0 0 0 -40px; }
+  @media only screen and (min-width: 600px) {
+    .about .main {
+      padding: 0; } }
   .about .main section {
     max-width: 300px;
     margin-left: 40px;
-    float: left;
     float: left; }
     .about .main section#about {
       max-width: 640px;

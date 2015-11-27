@@ -50,6 +50,13 @@ $(function() {
       e.preventDefault();
     });
 
+  // Close description if image clicked
+  $('.images').on('click', function(e, s){
+    if($(this).parents('article').hasClass('description-active')) {
+      $(this).parents('article').removeClass('description-active');
+    }
+  });
+
   $('.images').on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
         if(slick.slideCount < 2) return;
         if(event.type === "init") {
